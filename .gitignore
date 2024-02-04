@@ -1,0 +1,7 @@
+*.pyc
+settings.py
+db.sqlite3
+migrations/
+staticfiles/
+media/
+*.pdf
