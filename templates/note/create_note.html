@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- home.html in your app's templates folder -->
+{% extends 'note/base.html' %}
+
+{% block title %} Home - My Website {% endblock %}
+
+{% block content %}
+<head></head>
+    <body>
+        <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <!-- Create Note Form -->
+                    <div class="card rounded">
+                        <div class="card-body">
+                            <h2 class="card-title">Create Note</h2>
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="{{ form.title.id_for_label }}">Title:</label>
+                                    <input type="text" class="form-control" id="{{ form.title.id_for_label }}" name="{{ form.title.name }}" placeholder="Enter note title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="{{ form.content.id_for_label }}">Content:</label>
+                                    <textarea type="text" class="form-control" id="{{ form.content.id_for_label }}" name="{{ form.content.name }}" rows="5" placeholder="Enter note content" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="{{ form.image.id_for_label }}">Image:</label>
+                                    <input type="file" class="form-control-file" id="{{ form.image.id_for_label }}" name="{{ form.image.name }}">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Note</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% endblock %}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <!-- Add your custom CSS stylesheet here -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <!-- Include your website's header/navbar here -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+            <a class="navbar-brand" href="#">My Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Blog Post 1 -->
+                <div class="card mb-4 rounded">
+                    <img class="card-img-top" src="logo.png" alt="Blog Post Image 1">
+                    <div class="card-body">
+                        <h2 class="card-title">Post Title 1</h2>
+                        <p class="card-text">Published on: September 1, 2023</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ante eget urna dignissim auctor vel ac dui.</p>
+                        <a href="blog-post-1.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="card mb-4 rounded">
+                    <img class="card-img-top" src="logo.png" alt="Blog Post Image 2">
+                    <div class="card-body">
+                        <h2 class="card-title">Post Title 2</h2>
+                        <p class="card-text">Published on: September 5, 2023</p>
+                        <p class="card-text">Sed vehicula odio eget est cursus, eu tincidunt augue auctor. Fusce eu justo nec nisi congue malesuada.</p>
+                        <a href="blog-post-2.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Add more blog posts as needed -->
+
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Sidebar -->
+                <div class="card rounded">
+                    <div class="card-body">
+                        <h4 class="card-title">Categories</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Category 1</a></li>
+                            <li class="list-group-item"><a href="#">Category 2</a></li>
+                            <li class="list-group-item"><a href="#">Category 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4 rounded">
+                    <div class="card-body">
+                        <h4 class="card-title">Recent Posts</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Post Title 1</a></li>
+                            <li class="list-group-item"><a href="#">Post Title 2</a></li>
+                            <li class="list-group-item"><a href="#">Post Title 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Include your website's footer here -->
+        <div class="text-center p-4">
+            &copy; 2023 My Blog. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

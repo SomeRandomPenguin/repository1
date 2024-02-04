@@ -1,0 +1,49 @@
+<!-- base.html in your app's templates folder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <!-- Add your custom CSS stylesheet here if needed -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!-- Add Bootstrap CSS or any other styling library you prefer -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <!-- Include your website's header/navbar here -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+            <a class="navbar-brand" href="/note">Notes</a>
+            <!-- Add navigation links if needed -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'note:note_list' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'note:about' %}">About</a>
+                </li>
+                <!-- Add more navigation links as necessary -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Content block to be overridden by child templates -->
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <!-- Include your website's footer here -->
+        <div class="text-center p-4">
+            &copy; {% now "Y" %} My Website. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
